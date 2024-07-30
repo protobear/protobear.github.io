@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-07-30T19:00:10+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Protobear</title><subtitle>A place where Marnick writes down some of his personal opinions. </subtitle><entry><title type="html">MGMT, Oracular Spectacular</title><link href="http://localhost:4000/music/2024/07/30/MGMT.html" rel="alternate" type="text/html" title="MGMT, Oracular Spectacular" /><published>2024-07-30T19:00:00+02:00</published><updated>2024-07-30T19:00:00+02:00</updated><id>http://localhost:4000/music/2024/07/30/MGMT</id><content type="html" xml:base="http://localhost:4000/music/2024/07/30/MGMT.html"><![CDATA[<h2 id="mgmt">MGMT</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-07-30T20:12:23+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Protobear</title><subtitle>A place where Marnick writes down some of his personal opinions. </subtitle><entry><title type="html">You’ve got a friend (that wants to take your money) in me.</title><link href="http://localhost:4000/rant/2024/07/30/friend.html" rel="alternate" type="text/html" title="You’ve got a friend (that wants to take your money) in me." /><published>2024-07-30T20:00:00+02:00</published><updated>2024-07-30T20:00:00+02:00</updated><id>http://localhost:4000/rant/2024/07/30/friend</id><content type="html" xml:base="http://localhost:4000/rant/2024/07/30/friend.html"><![CDATA[<p>Hey tech bro’s,</p>
+
+<p>Can we just stop with this late-stage capitalist nonsense of creating inferior products to replace things we already have? It’s like a strategy to erode our reliance on actual skills and tools, all to charge us a monthly fee for something we can already do with minimal effort.</p>
+
+<p>This week, a tech company has launched a product aimed at replacing the idea of friends as a support system. It introduces a constant, chatty presence in your life, making sure you never have a moment of peace. Because god forbid you form an actual thought.</p>
+
+<p>Before we dive deeper, let’s watch the product video:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O_Q1hoEhfk4?si=B09Rt25ygPgVRDpy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+
+<p>What the actual fuck did we just witness?</p>
+
+<p>This device features an always-on microphone(I assume, the video shows it both ways) that texts you comments on your actions, responds to nonsensical remarks, makes judgments, and interrupts your activities—basically, it pretends to be an important figure in your life while actually being invasive and annoying.</p>
+
+<p>We often throw around Orwell’s name whenever something feels dystopian, but in this case, it seems apt. Orwell would probably be alarmed by such a device—a “friend” that monitors your every move, potentially manipulates your perceptions of reality as it is happening, and records your interactions. It’s like a creepy version of Big Brother masquerading as a buddy.</p>
+
+<p>The concept video is clearly overblown marketing for what is essentially just a wrapper around chatgpt. The claim that it’s been in development for years is laughable - The product is so underbaked and obviously in the concept stage. How can the AI make a comment on a show you’re watching if you had to press a button to talk to it afterwards? Is it recording your screen? Audio analysis? How does the AI have opinions on a show? Is this curated by other people? Does the AI know your preferences and says things to align with how you think? That comment the guy got about losing the game. Yeah trash talk is funny, but imagine getting that message when your confidence is low.</p>
+
+<blockquote>
+  <p>It’s, well, a friend — an AI friend that can go with you anywhere, experience things with you, and just be there with you all the time. “It’s very supportive, very validating, it’ll encourage your ideas,” Schiffmann 
+<a href="https://www.theverge.com/2024/7/30/24207029/friend-ai-companion-gadget"><em>Interview with “The Verge”</em></a></p>
+</blockquote>
+
+<p>A friend? No. It’s not. People get lonely. I’ve been there myself. But having an AI around your neck that says <em>“You go girl, eat that cheeseburger!”</em> isn’t solving loneliness. It’s making it worse by teaching people to expect from humans what they get from an AI in terms of communication and what support looks like, thereby unlearning real coping mechanisms.</p>
+
+<p>I suspect all the processing happens in a mobile app, and the necklace is just a Bluetooth microphone. At least if that’s true, you might be able to repurpose the device when the company inevitably goes under.</p>
+
+<p>Meanwhile, billions will be sunk into gadgets like this, which will eventually end up in landfills. All this while we bemoan the planet’s burning state, with AI set to use more energy by 2026 than Japan, a country of 125 million people. All thanks to unchecked corporate greed.</p>
+
+<p>In 1979 IBM said in a presentation</p>
+<blockquote>
+  <p>“A computer can never be held accountable, therefore a computer must never make a management decision” -</p>
+</blockquote>
+
+<p>So to end this rant I’d like to steal that quote and make it my own.</p>
+
+<blockquote>
+  <p>“A computer isn’t a fucking person, and therefore can’t be your fucking friend.”</p>
+</blockquote>]]></content><author><name></name></author><category term="rant" /><summary type="html"><![CDATA[Hey tech bro’s,]]></summary></entry><entry><title type="html">MGMT, Oracular Spectacular</title><link href="http://localhost:4000/music/2024/07/30/MGMT.html" rel="alternate" type="text/html" title="MGMT, Oracular Spectacular" /><published>2024-07-30T19:00:00+02:00</published><updated>2024-07-30T19:00:00+02:00</updated><id>http://localhost:4000/music/2024/07/30/MGMT</id><content type="html" xml:base="http://localhost:4000/music/2024/07/30/MGMT.html"><![CDATA[<h2 id="mgmt">MGMT</h2>
 <h3 id="oracular-spectacular">Oracular Spectacular</h3>
 
 <p>I often wonder how creative projects like this come together. Was there a grand vision, or did things naturally evolve into the final product? This question lingers especially when considering the choice to open the album with “Time to Pretend.” The song cynically mocks the clichés of rockstar success, suggesting that even in our dream scenarios, reality still hits hard. At least, that’s my interpretation. Unlike <a href="https://protobear.github.io/music/2024/07/29/Rage-Against-The-Machine.html">Rage Against the Machine</a>, which delivers its messages very directly, or <a href="https://protobear.github.io/music/2024/07/30/Marian-Hill.html">Marian Hill</a>, which seems to lack message, MGMT layers their songs with meaning and metaphor.</p>
