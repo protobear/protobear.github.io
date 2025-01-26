@@ -1,0 +1,24 @@
++++
+categories = ["music"]
+date = 2024-10-22T07:05:51Z
+description = ""
+draft = false
+image = "__GHOST_URL__/content/images/2024/10/MGMT-48.jpg"
+slug = "mgmt-oracular-spectacular"
+tags = ["music"]
+title = "MGMT, Oracular Spectacular"
+
++++
+
+
+Oracular Spectacular
+
+I often wonder how creative projects like this come together. Was there a grand vision, or did things naturally evolve into the final product? This question lingers especially when considering the choice to open the album with “Time to Pretend.” The song cynically mocks the clichés of rockstar success, suggesting that even in our dream scenarios, reality still hits hard. At least, that’s my interpretation. Unlike Rage Against the Machine, which delivers its messages very directly, or Marian Hill, which seems to lack message, MGMT layers their songs with meaning and metaphor.
+
+“Weekend Wars” is open to multiple interpretations. Is it about the fleeting nature of weekends? A quest for self-discovery? I’m not entirely sure, but that’s part of the charm. “The Youth” feels like a call to break generational cycles, while “Electric Feel” could be about the thrill of a new attraction, sex, or even the effects of drugs. MGMT leaves these interpretations open. This interpretative aspect acts almost like a Rorschach test, revealing as much about the listener as the music itself. For example, “Kids” seems to explore how we are shaped, often negatively, by the actions of those around us. But other people might say its about life, and how it’s fleeting so its better to not be passive in your observation of it.
+
+A criticism I had with my previous reviews, particularly with Marian Hill, is that not all songs manage to have their own identity. This is not the case with MGMT’s debut album. Every song on “Oracular Spectacular” stands on its own, each with a unique character. While some tracks may be more memorable than others, there are no bad songs on the album — a hill I’m willing to die on. If I have to say something negative its that some songs might feel a bit too long. But given the trend of shortening tracks in order to appeal to for short-form video content virality, I’d rather have a song that perhaps overstays its welcome than one that doesn’t have enough time to develop.
+
+“Oracular Spectacular” is a true gift. Its expertly crafted, sometimes psychedelic synthesizer sounds, paired with robust vocals and often impenetrable lyrics, create a 40-minute journey that captivates from start to finish.
+
+Disclaimer: This article was originally published on my GitHub Pages blog. Minor edits may have been made for clarity and formatting.

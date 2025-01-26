@@ -1,0 +1,190 @@
++++
+date = 2024-12-24T15:00:28Z
+description = ""
+draft = false
+image = "__GHOST_URL__/content/images/2024/12/Web-1920---2-1.png"
+slug = "best-games-2024"
+title = "Games That Stole My Heart, Broke It, or Just Wore Me Out in 2024"
+
++++
+
+
+2024 was a strange year for me when it came to gaming. It wasn’t a bad year by any means, there were plenty of great games. But nothing truly stood out as my game. Usually, I gravitate toward story-heavy, deeply immersive experiences, but this year I found myself leaning into fun, quick entertainment instead. Maybe it was the state of the world, or maybe I just needed games that didn’t ask too much of me. Not to say I didn't play some RPGs.
+
+There was a lot of joy to be found in genres I don’t usually pay much attention to, and I tried a lot of new things (maybe not as much as I wanted to). But not everything landed. Some games failed to hook me, or worse, frustrated me with baffling design choices or poor communication.
+
+Still, the games on this list are a reflection of my 2024: messy, unexpected, and occasionally brilliant. Whether they stole my heart, let me down, or were just… fine, here’s everything that stuck with me this year.
+
+
+
+
+The games I liked
+
+These games aren't perfect. But I liked them nonetheless
+
+The games on this list aren’t ranked in any particular order.
+
+
+Dragon Age: The Veilguard
+
+Was it the best RPG of all time? No.
+But was it fun? Did I enjoy exploring the maps, the gameplay, and the fact that it respected my time? Absolutely.
+
+I think it’s okay to enjoy flawed games, especially when they’re trying something new. Sure, I have plenty of critiques. The world often felt like a stage, with no real life outside of what it wanted me to focus on. A lot of little things bothered me, too. And yet, I kept playing and genuinely looked forward to every session.
+
+That said, controller support on PC (at least with my 8BitDo Pro) was a frustrating experience, especially when it came to selecting spells. It’s a shame, because the rest of the game deserved better in that department.
+
+
+
+
+Helldivers 2
+
+Pretending to be an unwitting cog in the military-industrial complex, delivered with satire so thick you’d think it impossible to miss, with friends has never been more fun.
+
+Helldivers 2 was great for what it was: a game that brought me together with friends for a few weeks of chaos and laughs before we all collectively moved on. And that’s okay. The game didn’t fail; it did exactly what it set out to do. It captured our attention while it lasted and still has a dedicated player base keeping it alive.
+
+More games like this, please.
+
+
+
+
+Astro Bot
+
+If you’re going to steal, do it well, and Sony clearly said “We want Mario”. And Mario they got. Astro Bot doesn’t need a story because it’s just plain fun from start to finish.
+
+Does it deserve Game of the Year accolades? Honestly, I’m not sure, it’s a tough call. The game executes everything it sets out to do exceptionally well. It offers a variety of playstyles and constantly introduces fresh ideas, keeping the gameplay from ever feeling stale. I loved my time with it.
+
+But at the same time, it feels like an advertisement, a showcase for Sony’s tech and characters. So, while it’s great, it also leaves me feeling a little conflicted.
+
+
+
+
+The Bazaar
+
+The gameplay is solid, the art is charming, and it’s just plain fun. Perfect for when you’ve got a few spare minutes but can’t commit to babysitting live matches. If you’re familiar with “auto chess” or the autobattler genre, this will feel instantly recognizable.
+
+Your only actions happen between rounds as you build out your setup. Once a round starts, it’s completely out of your hands. This makes it great for quick bursts of play as you can dive in for 5 minutes, forget it’s running for another 25, and then pick up right where you left off.
+
+
+
+
+Metaphor: ReFantazio
+
+It’s Persona, but also not. If you’re a fan of Persona, give it a shot but keep in mind its different in some aspects. If you’re not a fan, still give it a shot. I especially enjoyed playing it in short bursts, which makes it a great fit for the Steam Deck. That said, developers, please stop making games where you can’t save anywhere and anywhere, it’s 2024, let us live our lives!
+
+For a game called Metaphor, it doesn’t shy away from laying its themes on thick. But after playing Helldivers 2, I’m more convinced than ever that media literacy is dead, and sometimes you really do need to spoonfeed concepts to people.
+
+And if you’re someone who doesn’t like politics in your games, well… sorry, but it’s time to grow up. Nearly every story reveals the writer’s biases and has some level of political undercurrent. That said, this might not be the game for you.
+
+For me, it was the perfect story to end 2024 on.
+
+
+
+
+Animal Well
+
+Well, fuck me. After claiming all games are political, here comes Animal Well, a game that doesn’t even have dialogue. It’s all about observing the environment, uncovering hidden bits and pieces, and letting the world tell its story without saying a word. Which means its up to your interpretation.
+
+It’s hard, intricate, and undeniably beautiful. If you’re into metroidvanias, go give it a shot.
+
+
+
+
+Indiana Jones and the Great Circle
+
+I haven’t spent enough time with this one to call it “amazing” or “GOTY-worthy,” but from what I’ve played, it’s absolutely beautiful and feels authentic to the Indiana Jones vibe. It’s good, it’s entertaining, but it also feels a bit like a movie turned into a game, which isn’t necessarily a bad thing depending on what you want from that moment..
+
+What I really appreciate is how the game trusts you. It doesn’t hold your hand, encourages you to backtrack, find new items, and unlock different paths. It’s a refreshing approach, and I’m excited to give it another go when it releases on PS5.
+
+I played it on Game Pass (a service I’m not overly fond of) and while it ran well on my PC, this is the kind of game I’d rather enjoy from the comfort of my sofa.
+
+
+
+
+Chants of Sennaar
+
+Though it released in 2023, I only got around to playing it this year. It’s a puzzle game where you decipher languages to understand the people and figure out your objectives as you climb a tower.
+
+What really stands out is how the game explores the relationship between language and culture. It’s a fascinating game wrapped in an engaging and beautifully designed experience. Definitely worth checking out if you enjoy puzzles and thoughtful world-building.
+
+
+
+
+Jeff: The Game (Marvel Rivals)
+
+Not in a million years would I have predicted this game would succeed, let alone that I’d actually like it. Netease doesn’t exactly inspire confidence when it comes to avoiding nickel-and-diming tactics or straight up abandoning the game down the line. And honestly, the game’s future isn’t guaranteed. It’s riding the hype cycle right now, but I’ve had friends come out of the woodwork to play this with me, friends I haven’t heard from in years.
+
+And that? That makes me happy. What makes me sad, though, is how it reminds me of what Overwatch could’ve been. I’ll always prefer first-person shooters, and Overwatch still has better gamefeel and, in my opinion, superior map design. It unfortunately comes nowhere close to the fun that I have with Rivals, and it's all because of that stupid shark. That goddamn adorable shark, Jeff, has completely stolen my heart. I’ve never really been into Marvel comics outside of X-Men, but here I am, diving into them because of that delightful little apex predator.
+
+Take my money, Jeff. You’ve earned it.
+
+
+Games that don't really think of as games?
+
+Some of the things I played this year feel less like “games” and more like “toys.” They’re not so much about playing as they are about fiddling and experimenting. But does that distinction even matter?
+
+
+SUMMERHOUSE
+
+It’s hard to put this game into words, so I’ll borrow the developers’ description: “A tiny building game about beautiful lived-in houses. No rules or restrictions, just pure creativity.”
+
+And honestly, that sums it up perfectly. I enjoyed it immensely. Sometimes, the right game finds you at exactly the right time.
+
+
+
+
+Spirit City: Lofi Sessions
+
+If I think SUMMERHOUSE barely qualifies as a game, then Spirit City: Lofi Sessions is even further from it. It’s practically a productivity tool. With trackers, lists, and a built-in Pomodoro timer, it’s designed to help you get things done rather than just play.
+
+That said, I wish there were a mobile version so those lists didn’t live exclusively on my PC. At the very least, a Mac version would be nice.
+
+But if you enjoy listening to lofi hip-hop while working, decorating rooms and characters, and generally love cozy vibes, it’s worth a try. It’s oddly satisfying and makes productivity feel a little less like a chore.
+
+
+
+
+Tiny Glade
+
+I'm breaking my own rule her of including only one image per game, it's just that gorgeous. It’s similar in concept to SUMMERHOUSE, a game about creativity and building. But with a completely different art style and far more detail. It’s proof that if you give people a canvas, they’ll create art (and apparently half the locations from Lord of the Rings).
+
+Once more I'm going to give you the developers' description because it does a great job at explaining what it is: "Tiny Glade is a small diorama builder where you doodle whimsical castles, cozy cottages & romantic ruins. Explore gridless building chemistry as the game adorns your glades with procedural detail. No management, combat or goals: just kick back and turn forgotten meadows into lovable dioramas."
+
+Just go take a look at some screenshots here.
+
+
+
+
+The Games I Disliked
+
+I’m not saying these are bad games. For one reason or another, though, I played them and just didn’t enjoy myself. Maybe they didn’t click with me, or maybe I expected more from them than they delivered.
+
+
+
+
+Dragon's Dogma 2
+
+I tried it a few times, and I was really excited to play it based on what I heard others say but it wasn't a good experience on PC for me. The controls weren't doing it for me and the world failed to grab me fast enough. I can't really describe it any other way as tedious for me.
+
+
+
+
+Corepunk
+
+I’ve already written about my experience with Corepunk, and you can read more about it here.
+
+I still hold out hope they can course correct, maybe a Steam launch can save them from their rocky start. But the real reason it’s on this list is their absolutely piss poor communication. Their servers were down for an entire week, and not a single update was posted on their site. And I don't want to keep opening the launcher to see updates either.
+
+Everything about this game feels like a frustrating experience. Why is the launcher a portable file and not a proper installer? Most people aren’t going to bother with extracting a folder, they’ll take one look at it and move on because DLL files scary. It’s such a baffling choice for accessibility which might as well be the subtitle for this game. Corepunk: Making baffling accessibility choices.
+
+
+
+
+The Plucky Squire
+
+Again, this isn’t a bad game, it’s just not for me. Everything felt too simplistic, which might be because I’m not the target audience, and it dragged on a bit too much for my taste. They’ve introduced a new mode that promises to speed up the pace, so I might give it another shot. Still, I can’t help but feel they could’ve done more with their unique concept and no amount of pace fixing will make the puzzles harder.
+
+
+
+
+

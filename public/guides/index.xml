@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Guides on Protobear.dev</title>
+    <link>http://localhost:1313/guides/</link>
+    <description>Recent content in Guides on Protobear.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <managingEditor>reply@protobear.dev (Marnick De Grave)</managingEditor>
+    <webMaster>reply@protobear.dev (Marnick De Grave)</webMaster>
+    <copyright>Marnick De Grave</copyright>
+    <lastBuildDate>Thu, 05 Dec 2024 17:25:08 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/guides/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to set a custom domain name as a handle on Bluesky</title>
+      <link>http://localhost:1313/guides/how-to-set-a-custom-domain-name-as-a-handle-on-bluesky/</link>
+      <pubDate>Thu, 05 Dec 2024 17:25:08 +0000</pubDate><author>reply@protobear.dev (Marnick De Grave)</author>
+      <guid>http://localhost:1313/guides/how-to-set-a-custom-domain-name-as-a-handle-on-bluesky/</guid>
+      <description>&lt;p&gt;Some people think that setting a custom domain as your Bluesky handle requires self-hosting or managing complex systems, but that’s not the case. Unlike platforms like Mastodon, which can involve hosting an entire server, Bluesky’s identity verification system is much simpler. You don’t need to run a server or host anything, just prove that you own the domain.&lt;/p&gt;&#xA;&lt;p&gt;It’s a straightforward and secure process.&lt;/p&gt;&#xA;&lt;p&gt;Your domain isn’t tied to a single username, either. You can even use subdomains or create handles that overlap with existing domains. For example, my Bluesky handle is @protobear.dev, which matches my domain, protobear.dev. But I’m not limited to that. I could create a separate account just for my blog and set the handle to @blog.protobear.dev if I wanted. Just note that domain-based handles don’t work like email addresses, you can’t use &lt;a href=&#34;mailto:blog@protobear.dev&#34;&gt;blog@protobear.dev&lt;/a&gt; as a handle.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>Some people think that setting a custom domain as your Bluesky handle requires self-hosting or managing complex systems, but that’s not the case. Unlike platforms like Mastodon, which can involve hosting an entire server, Bluesky’s identity verification system is much simpler. You don’t need to run a server or host anything, just prove that you own the domain.</p>
+<p>It’s a straightforward and secure process.</p>
+<p>Your domain isn’t tied to a single username, either. You can even use subdomains or create handles that overlap with existing domains. For example, my Bluesky handle is @protobear.dev, which matches my domain, protobear.dev. But I’m not limited to that. I could create a separate account just for my blog and set the handle to @blog.protobear.dev if I wanted. Just note that domain-based handles don’t work like email addresses, you can’t use <a href="mailto:blog@protobear.dev">blog@protobear.dev</a> as a handle.</p>
+<p>Here’s how simple it is to set this up:</p>
+<ol>
+<li>Generate a key from Bluesky.</li>
+<li>Add a DNS record.</li>
+<li>Click refresh.</li>
+</ol>
+<p>That’s it! You’re done! It’s genuinely that simple.</p>
+<p>To make this less intimidating, I’ll walk you through the process step by step using a domain I already own for a project I’m working on. Even if it seems daunting at first, you’ll see there’s really not much to it.</p>
+<p>Important: While it&rsquo;s not technically difficult to change your handle it involves many different technologies you might not be familiar with, and understandably have questions about as its not entirely unlikely your livelihood is coupled to the domain you&rsquo;d wish to use. That&rsquo;s why at the bottom there&rsquo;s some extra explanations about these technologies, or questions you might have.</p>
+<p>Instructions</p>
+<p>Before we begin, you’ll need to have a Bluesky account already set up. If you don’t have one yet, create an account and log in. Once you&rsquo;re ready, head over to the Settings page to get started.</p>
+<p>Generating the DNS Record</p>
+<p>On the Settings page, navigate to the Account section.</p>
+<p>On the Account page, click on Handle to start the process of setting your custom domain as your handle.</p>
+<p>Click on I have my own domain.</p>
+<p>Once you&rsquo;ve clicked I have my own domain, enter your desired domain name into the field at the top. This will generate the DNS information you need to add to your domain&rsquo;s settings. Make note of the Host, Type, and Value fields, as you&rsquo;ll need these to update your DNS records.</p>
+<p>Adding the DNS Record to your Registrar</p>
+<p>Go to your domain registrar&rsquo;s website (if you don’t already have a domain, I recommend Cloudflare) and navigate to the section where you can manage DNS Records.</p>
+<p>A DNS record is essentially a file associated with your domain name that tells the DNS system where to direct traffic. Don’t worry, we’re not touching the essential records like A, AAAA, or CNAME records that control your website’s functionality.</p>
+<p>Instead, we’re adding a TXT record, which is a simple text-based record often used to verify ownership of a domain. Adding this record poses no security risk to your domain, and Bluesky can’t take control of it.</p>
+<p>Once you’re in the DNS Records section, look for an option to Add a Record—this is where we’ll add the TXT record for Bluesky.</p>
+<p>Other Registrars</p>
+<p>To make this process even easier, I’ve included links to the documentation for adding DNS records for several popular domain registrars. These guides will walk you through the exact steps for your registrar:</p>
+<ul>
+<li>GoDaddy</li>
+<li>Namecheap</li>
+<li>Porkbun</li>
+<li>Hostinger</li>
+<li>Cloudflare</li>
+<li>Wordpress</li>
+</ul>
+<p>Adding the DNS Record</p>
+<p>When you click on Add record you&rsquo;ll get something like this.</p>
+<p>The first thing you should do is change the type to TXT.</p>
+<p>If you&rsquo;re using Cloudflare, don’t worry if the interface looks a bit different initially. When you change the type to TXT, the UI will update to match the format for TXT records. After making this change, it should look something like this:</p>
+<p>From here, you can input the required details provided by Bluesky. These include:</p>
+<ul>
+<li>Name: This will typically be _atproto (or whatever Bluesky specifies).</li>
+<li>Content: Copy and paste the unique value generated by Bluesky for verification.</li>
+<li>TTL: Leave it as the default. (Auto)</li>
+</ul>
+<p>You can find these details on the change handle modal on the Bluesky settings page.</p>
+<p>The Name field should match what Bluesky refers to as the Host, and the Content field should be filled in with the Value provided by Bluesky.</p>
+<p>Once you’ve entered these details, save the record. This step links your Bluesky handle to your domain and verifies your ownership.</p>
+<p>You should now see your new TXT record listed alongside your other DNS records, similar to the image above.</p>
+<p>Depending on your domain registrar, it may take some time for the changes to propagate. With Cloudflare, this process usually takes about a minute.</p>
+<p>Once you&rsquo;ve waited for about a minute, go back to Bluesky and click Verify DNS Record to complete the process.</p>
+<p>If the record has been added correctly, you’ll see a green checkmark, and the button will change to say &ldquo;Update to {domain name}&rdquo;.</p>
+<p>Click this button, and your Bluesky handle will be updated to the domain name you set up. Congratulations! You’re now using your custom domain as your Bluesky handle!</p>
+<p>If Bluesky doesn’t find the DNS record right away, don’t panic! Sometimes it takes a little while for changes to propagate. Depending on factors outside of your control (Like the DNS network) and the registrar you chose (which is within your control), propagation can take up to 72 hours in rare cases.</p>
+<p>To speed things up, make sure the TTL (Time-To-Live) value for your record is set to Auto or a low value like 15 minutes. This will ensure the changes update more quickly. Once the domain is successfully verified, you can change the TTL back to a longer value to reduce unnecessary DNS traffic.</p>
+<p>Patience is key, just wait a bit and try verifying again!</p>
+<p>Optional: Adding subdomains as handles</p>
+<p>You can also use this setup for team members by creating subdomains for each individual. For example, if your main domain is example.com, you could assign subdomains like alice.example.com or bob.example.com to specific team members.</p>
+<p>Simply follow the same steps:</p>
+<ol>
+<li>Add a TXT record for each subdomain in your DNS settings.</li>
+<li>Use the Host field to specify the subdomain (e.g., _atproto.alice for alice.example.com).</li>
+<li>Fill in the Value provided by Bluesky for each account.</li>
+</ol>
+<p>This allows each team member to have a unique handle tied to your organization’s domain, making it both professional and secure!</p>
+<p>QYDA: Questions You Didn&rsquo;t Ask</p>
+<p>What’s a registrar?</p>
+<p>A registrar is the service you use to register and manage a domain name. Think of it as the storefront where you purchase the rights to use a specific domain (e.g., example.com). Registrars also provide tools to manage your domain, like setting up DNS records or renewing your ownership. Popular registrars include Cloudflare, GoDaddy, and Namecheap.</p>
+<p>What’s DNS?</p>
+<p>The Domain Name System (DNS) is like the internet’s address book. When you type a domain name (e.g., example.com) into your browser, DNS translates it into the numerical IP address of the server hosting that website. Without DNS, you’d need to memorize long strings of numbers to visit websites instead of using easy-to-remember names.</p>
+<p>DNS also helps direct other internet traffic, like email or authentication services, by linking domain names to specific servers or systems.</p>
+<p>What’s a DNS record?</p>
+<p>A DNS record is a set of instructions in the DNS that tells internet systems what to do with your domain name. It’s essentially a piece of data that answers questions like:</p>
+<ul>
+<li>“Where is this website hosted?” (via an A or AAAA record pointing to an IP address)</li>
+<li>“Which server should handle mail for this domain?” (via an MX record).</li>
+</ul>
+<p>DNS records also serve other purposes, such as verification. For example:</p>
+<ul>
+<li>SPF or DKIM records: Confirm email authenticity.</li>
+<li>TXT records: Provide additional information about your domain.</li>
+</ul>
+<p>In the case of Bluesky, a TXT record is used to verify that your Bluesky account belongs to the owner of a specific domain. This allows you to connect your domain name as your handle securely.</p>
+<p>What’s a PDS?</p>
+<p>A Personal Data Server (PDS) is a system that stores and manages your online identity and content on decentralized networks like Bluesky’s AT Protocol. Instead of relying entirely on centralized platforms like traditional social networks, a PDS gives you control over your data, allowing you to move between platforms or even self-host if you want.</p>
+<p>Think of a PDS as your personal hub on the web. It ensures that you own your content and identity, and not the platform you’re using.</p>
+<p>Does this mean I’m self-hosting now?</p>
+<p>No, setting up a custom domain for your Bluesky handle doesn’t mean you’re self-hosting. You’re not hosting a server or managing any of the technical backend systems. All you’re doing is proving ownership of a domain by adding a DNS record, which Bluesky uses to verify and associate your domain name with your handle.</p>
+<p>In simpler terms, you’re just adding a tag to your domain to show that “you own this,” and Bluesky does the rest. It’s a lightweight process that doesn’t require any ongoing maintenance.</p>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>

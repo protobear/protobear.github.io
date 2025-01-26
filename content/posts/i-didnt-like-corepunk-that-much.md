@@ -1,0 +1,71 @@
++++
+categories = ["games"]
+date = 2024-12-03T20:02:47Z
+description = ""
+draft = false
+image = "__GHOST_URL__/content/images/2024/12/corepunk_key_art.png"
+slug = "i-didnt-like-corepunk-that-much"
+tags = ["games"]
+title = "I didn't like Corepunk that much."
+
++++
+
+
+Over the summer, I finally purchased Corepunk, a game I had eagerly anticipated for years. Its top-down viewpoint, MOBA-inspired combat, and mixed progression systems promised a refreshing departure from the usual MMORPG formula. The aesthetic was striking, and the idea of a world that wouldn’t hold my hand through exploration intrigued me. After hosting an AMA for the game, the team even sent me a PR package, complete with my now-favorite socks and pen, which only added to my excitement. But as the saying goes, “The higher the climb, the harder the fall.”
+
+When I first attempted to play Corepunk in the summer, I encountered a bug that prevented me from accepting the opening quest. Frustrating, but I chalked it up to the beta phase and resolved to try again after its soft launch in November. Unfortunately, my excitement soon turned into disappointment. After just 60 or so minutes of gameplay, I found myself logging out, disillusioned and frustrated.
+
+Some of my frustrations are fixable, while others stem from what I see as core design flaws. My initial excitement about the game’s hands-off approach to navigation quickly morphed into my biggest annoyance: Corepunk doesn’t just fail to guide players; it actively undermines exploration with its lack of support.
+
+I’ve broken down my core issues (pun intended) into three punkts (You see, the joke here is that punkt in German means point, I know, jokes are better when explained): Navigation, Questing, and Combat.
+
+
+Navigation
+
+One of the things I initially appreciated was the absence of big, flashing markers showing me where to go. I thought, “Finally, a game that trusts players to explore!” But Corepunk doesn’t complement this design choice with the tools needed to make exploration rewarding. Here are some key issues:
+
+No Navigation Signs
+
+There are no clear indicators of where to go. Buildings may have signs, but many require you to hover over symbols to understand what they represent. This breaks immersion and slows progress. I'm not asking for big arrows leading me to my destination, but maybe a road sign or two. Or the ability to ask a guard?
+
+Perspective Challenges
+
+The top-down view, while aesthetically pleasing, makes it nearly impossible to rely on landmarks for navigation. You can’t look into the distance, and while this limitation is intentional, the terrain isn’t unique enough to compensate. Games like Diablo and Path of Exile work around this by designing corridors that naturally guide the player. Diablo 4 even incorporates vistas to provide a sense of direction. Corepunk, by contrast, leaves players adrift.
+
+Unclear Quest Objectives
+
+For one quest, I had to locate an NPC in a specific building. I remembered seeing the building before, complete with its sign, so I confidently went there. But when I tried to enter through the door next to the neon sign, it was locked and mentioned lacking a key. After wasting time trying to “solve” this puzzle, I discovered there was no puzzle and the NPC was actually in a nearby courtyard. With no visual indicators to identify them like, god, I don't know, how about their name above their head? To make matters worse, players crowded the NPC, and their wandering made it even harder to find them. The quest text didn’t clarify any of this, leaving me frustrated. ESO actually does this really well, if you were to turn off the UI and purely rely on quest text it does a really good job explaining you where you need to go.
+
+This lack of clarity is more than frustrating: it’s exhausting. Fixing this would likely require a significant rework of the world design. For future zones, developers could add clearer visual cues and improved quest text to help players but I fear for the already in-game zones its too late.
+
+
+Questing
+
+Corepunk’s quest design only exacerbates its navigation problems. Here are three quests that highlight the issues and made me question my sanity:
+
+1. The First Optional Quest
+
+Early on, I spoke to an NPC (who had no name above their head or other indicators to suggest they offered a quest) who tasked me with searching barrels for mana crystals “on the farms.” With no map indicators or clear textual guidance, I spent several minutes searching the nearest farm—only to find nothing. Were the barrels elsewhere? Was it bugged? Did I misunderstand? The game offered no clarity, but it was listed as 1 or 2 levels above mine so I figured it might be in a farm elsewhere in the zone. I kept looking though. The next quest mirrors this problem a little bit.
+
+2. The Grain Hunt
+
+The second quest seemed simple: gather three grain to make flour. Yet this task took an infuriating 10 whole minutes. The quest vaguely mentioned finding containers on a farm (which one? not specified. There's dozens around), but interactable objects were incredibly sparse. Worse, some of the grain I eventually found wasn’t even located on a farm but at a butcher’s shop! Whether this was poor design or a bug, it felt like the game was actively working against me. I don’t think I can overstate how frustrating this was. I double-checked every farm and field to ensure I hadn’t missed anything. This wasn’t a case of “lol didn’t read.” I’m not exaggerating when I say it took 10 minutes to complete this simple task. I like to believe I'm not dumb[citation needed] but this really made me question my intelligence.
+
+3. Shove Your F****** Bread Up Your F******* Arse.
+
+After crafting flour into bread (a process the game handles partially for you, missing an opportunity for tutorialization), I had to go speak to different npc's. While exploring the area beforehand allowed me to see them on the map, this quest revealed a significant UI issue: the quest log and the overlay provided conflicting information. One included the NPCs’ names; the other didn’t. To access basic information, I had to awkwardly rearrange map windows, a clunky and unnecessary hurdle. But why would the overlay contain MORE information than the journal? That's just weird to me. And it was at this point I realized, this isn't just a singular issue. This has been my problem the entire time. Even with the first quest which leads you somewhere with a gigantic arrow pointing at nobody, only to open your map and see you were supposed to go elsewhere. The game does not want you to know where to go.
+
+
+Combat
+
+While I had high hopes that combat would redeem Corepunk, but it fell short in this area as well. Early fights rely heavily on auto-attacking, offering minimal strategy or engagement. The slow pacing and limited toolkit made encounters feel more like a chore than a challenge. For a game marketed as MOBA-inspired, this was a disappointing experience. While I imagine combat improves as you unlock more skills, the introductory fights failed to leave a strong impression. First impressions matter, and Corepunk squandered its chance to hook me.
+
+Adding to the frustration is the painfully slow recovery process after combat. Healing outside of battle is a grind, either you run back to town (which feels absurd) or burn through consumables (a tolerable but uninspired solution). Since surviving two encounters in a row is nearly impossible early on, the downtime between fights becomes a tedious slog, slamming the brakes on an already slow-paced game.
+
+
+It Might Pull Through
+
+Despite my frustrations, Corepunk isn’t without merit. The visuals are stunning, and the world-building shows potential. If the developers address these issues, the game could shine in the long run. The combat, too, might become more engaging as players unlock additional abilities. But as it stands, Corepunk fails to live up to its potential.
+
+I’ll give the game another chance at full launch, but I’m no longer holding my breath. With some serious overhauls, Corepunk could still become the game I once dreamed of playing. For now, however, all I can do is hope that they manage to fix its most glaring issues and finds a playerbase so that they can establish themselves and maybe work towards a version of the game that appeals to more people. Until then it serves as a reminder that even the most promising concepts can falter in execution.
+

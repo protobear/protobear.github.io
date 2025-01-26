@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tech on Protobear.dev</title>
+    <link>http://localhost:1313/tags/tech/</link>
+    <description>Recent content in Tech on Protobear.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <managingEditor>reply@protobear.dev (Marnick De Grave)</managingEditor>
+    <webMaster>reply@protobear.dev (Marnick De Grave)</webMaster>
+    <copyright>Marnick De Grave</copyright>
+    <lastBuildDate>Thu, 05 Dec 2024 17:25:08 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to set a custom domain name as a handle on Bluesky</title>
+      <link>http://localhost:1313/guides/how-to-set-a-custom-domain-name-as-a-handle-on-bluesky/</link>
+      <pubDate>Thu, 05 Dec 2024 17:25:08 +0000</pubDate><author>reply@protobear.dev (Marnick De Grave)</author>
+      <guid>http://localhost:1313/guides/how-to-set-a-custom-domain-name-as-a-handle-on-bluesky/</guid>
+      <description>&lt;p&gt;Some people think that setting a custom domain as your Bluesky handle requires self-hosting or managing complex systems, but that’s not the case. Unlike platforms like Mastodon, which can involve hosting an entire server, Bluesky’s identity verification system is much simpler. You don’t need to run a server or host anything, just prove that you own the domain.&lt;/p&gt;&#xA;&lt;p&gt;It’s a straightforward and secure process.&lt;/p&gt;&#xA;&lt;p&gt;Your domain isn’t tied to a single username, either. You can even use subdomains or create handles that overlap with existing domains. For example, my Bluesky handle is @protobear.dev, which matches my domain, protobear.dev. But I’m not limited to that. I could create a separate account just for my blog and set the handle to @blog.protobear.dev if I wanted. Just note that domain-based handles don’t work like email addresses, you can’t use &lt;a href=&#34;mailto:blog@protobear.dev&#34;&gt;blog@protobear.dev&lt;/a&gt; as a handle.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>Some people think that setting a custom domain as your Bluesky handle requires self-hosting or managing complex systems, but that’s not the case. Unlike platforms like Mastodon, which can involve hosting an entire server, Bluesky’s identity verification system is much simpler. You don’t need to run a server or host anything, just prove that you own the domain.</p>
+<p>It’s a straightforward and secure process.</p>
+<p>Your domain isn’t tied to a single username, either. You can even use subdomains or create handles that overlap with existing domains. For example, my Bluesky handle is @protobear.dev, which matches my domain, protobear.dev. But I’m not limited to that. I could create a separate account just for my blog and set the handle to @blog.protobear.dev if I wanted. Just note that domain-based handles don’t work like email addresses, you can’t use <a href="mailto:blog@protobear.dev">blog@protobear.dev</a> as a handle.</p>
+<p>Here’s how simple it is to set this up:</p>
+<ol>
+<li>Generate a key from Bluesky.</li>
+<li>Add a DNS record.</li>
+<li>Click refresh.</li>
+</ol>
+<p>That’s it! You’re done! It’s genuinely that simple.</p>
+<p>To make this less intimidating, I’ll walk you through the process step by step using a domain I already own for a project I’m working on. Even if it seems daunting at first, you’ll see there’s really not much to it.</p>
+<p>Important: While it&rsquo;s not technically difficult to change your handle it involves many different technologies you might not be familiar with, and understandably have questions about as its not entirely unlikely your livelihood is coupled to the domain you&rsquo;d wish to use. That&rsquo;s why at the bottom there&rsquo;s some extra explanations about these technologies, or questions you might have.</p>
+<p>Instructions</p>
+<p>Before we begin, you’ll need to have a Bluesky account already set up. If you don’t have one yet, create an account and log in. Once you&rsquo;re ready, head over to the Settings page to get started.</p>
+<p>Generating the DNS Record</p>
+<p>On the Settings page, navigate to the Account section.</p>
+<p>On the Account page, click on Handle to start the process of setting your custom domain as your handle.</p>
+<p>Click on I have my own domain.</p>
+<p>Once you&rsquo;ve clicked I have my own domain, enter your desired domain name into the field at the top. This will generate the DNS information you need to add to your domain&rsquo;s settings. Make note of the Host, Type, and Value fields, as you&rsquo;ll need these to update your DNS records.</p>
+<p>Adding the DNS Record to your Registrar</p>
+<p>Go to your domain registrar&rsquo;s website (if you don’t already have a domain, I recommend Cloudflare) and navigate to the section where you can manage DNS Records.</p>
+<p>A DNS record is essentially a file associated with your domain name that tells the DNS system where to direct traffic. Don’t worry, we’re not touching the essential records like A, AAAA, or CNAME records that control your website’s functionality.</p>
+<p>Instead, we’re adding a TXT record, which is a simple text-based record often used to verify ownership of a domain. Adding this record poses no security risk to your domain, and Bluesky can’t take control of it.</p>
+<p>Once you’re in the DNS Records section, look for an option to Add a Record—this is where we’ll add the TXT record for Bluesky.</p>
+<p>Other Registrars</p>
+<p>To make this process even easier, I’ve included links to the documentation for adding DNS records for several popular domain registrars. These guides will walk you through the exact steps for your registrar:</p>
+<ul>
+<li>GoDaddy</li>
+<li>Namecheap</li>
+<li>Porkbun</li>
+<li>Hostinger</li>
+<li>Cloudflare</li>
+<li>Wordpress</li>
+</ul>
+<p>Adding the DNS Record</p>
+<p>When you click on Add record you&rsquo;ll get something like this.</p>
+<p>The first thing you should do is change the type to TXT.</p>
+<p>If you&rsquo;re using Cloudflare, don’t worry if the interface looks a bit different initially. When you change the type to TXT, the UI will update to match the format for TXT records. After making this change, it should look something like this:</p>
+<p>From here, you can input the required details provided by Bluesky. These include:</p>
+<ul>
+<li>Name: This will typically be _atproto (or whatever Bluesky specifies).</li>
+<li>Content: Copy and paste the unique value generated by Bluesky for verification.</li>
+<li>TTL: Leave it as the default. (Auto)</li>
+</ul>
+<p>You can find these details on the change handle modal on the Bluesky settings page.</p>
+<p>The Name field should match what Bluesky refers to as the Host, and the Content field should be filled in with the Value provided by Bluesky.</p>
+<p>Once you’ve entered these details, save the record. This step links your Bluesky handle to your domain and verifies your ownership.</p>
+<p>You should now see your new TXT record listed alongside your other DNS records, similar to the image above.</p>
+<p>Depending on your domain registrar, it may take some time for the changes to propagate. With Cloudflare, this process usually takes about a minute.</p>
+<p>Once you&rsquo;ve waited for about a minute, go back to Bluesky and click Verify DNS Record to complete the process.</p>
+<p>If the record has been added correctly, you’ll see a green checkmark, and the button will change to say &ldquo;Update to {domain name}&rdquo;.</p>
+<p>Click this button, and your Bluesky handle will be updated to the domain name you set up. Congratulations! You’re now using your custom domain as your Bluesky handle!</p>
+<p>If Bluesky doesn’t find the DNS record right away, don’t panic! Sometimes it takes a little while for changes to propagate. Depending on factors outside of your control (Like the DNS network) and the registrar you chose (which is within your control), propagation can take up to 72 hours in rare cases.</p>
+<p>To speed things up, make sure the TTL (Time-To-Live) value for your record is set to Auto or a low value like 15 minutes. This will ensure the changes update more quickly. Once the domain is successfully verified, you can change the TTL back to a longer value to reduce unnecessary DNS traffic.</p>
+<p>Patience is key, just wait a bit and try verifying again!</p>
+<p>Optional: Adding subdomains as handles</p>
+<p>You can also use this setup for team members by creating subdomains for each individual. For example, if your main domain is example.com, you could assign subdomains like alice.example.com or bob.example.com to specific team members.</p>
+<p>Simply follow the same steps:</p>
+<ol>
+<li>Add a TXT record for each subdomain in your DNS settings.</li>
+<li>Use the Host field to specify the subdomain (e.g., _atproto.alice for alice.example.com).</li>
+<li>Fill in the Value provided by Bluesky for each account.</li>
+</ol>
+<p>This allows each team member to have a unique handle tied to your organization’s domain, making it both professional and secure!</p>
+<p>QYDA: Questions You Didn&rsquo;t Ask</p>
+<p>What’s a registrar?</p>
+<p>A registrar is the service you use to register and manage a domain name. Think of it as the storefront where you purchase the rights to use a specific domain (e.g., example.com). Registrars also provide tools to manage your domain, like setting up DNS records or renewing your ownership. Popular registrars include Cloudflare, GoDaddy, and Namecheap.</p>
+<p>What’s DNS?</p>
+<p>The Domain Name System (DNS) is like the internet’s address book. When you type a domain name (e.g., example.com) into your browser, DNS translates it into the numerical IP address of the server hosting that website. Without DNS, you’d need to memorize long strings of numbers to visit websites instead of using easy-to-remember names.</p>
+<p>DNS also helps direct other internet traffic, like email or authentication services, by linking domain names to specific servers or systems.</p>
+<p>What’s a DNS record?</p>
+<p>A DNS record is a set of instructions in the DNS that tells internet systems what to do with your domain name. It’s essentially a piece of data that answers questions like:</p>
+<ul>
+<li>“Where is this website hosted?” (via an A or AAAA record pointing to an IP address)</li>
+<li>“Which server should handle mail for this domain?” (via an MX record).</li>
+</ul>
+<p>DNS records also serve other purposes, such as verification. For example:</p>
+<ul>
+<li>SPF or DKIM records: Confirm email authenticity.</li>
+<li>TXT records: Provide additional information about your domain.</li>
+</ul>
+<p>In the case of Bluesky, a TXT record is used to verify that your Bluesky account belongs to the owner of a specific domain. This allows you to connect your domain name as your handle securely.</p>
+<p>What’s a PDS?</p>
+<p>A Personal Data Server (PDS) is a system that stores and manages your online identity and content on decentralized networks like Bluesky’s AT Protocol. Instead of relying entirely on centralized platforms like traditional social networks, a PDS gives you control over your data, allowing you to move between platforms or even self-host if you want.</p>
+<p>Think of a PDS as your personal hub on the web. It ensures that you own your content and identity, and not the platform you’re using.</p>
+<p>Does this mean I’m self-hosting now?</p>
+<p>No, setting up a custom domain for your Bluesky handle doesn’t mean you’re self-hosting. You’re not hosting a server or managing any of the technical backend systems. All you’re doing is proving ownership of a domain by adding a DNS record, which Bluesky uses to verify and associate your domain name with your handle.</p>
+<p>In simpler terms, you’re just adding a tag to your domain to show that “you own this,” and Bluesky does the rest. It’s a lightweight process that doesn’t require any ongoing maintenance.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>How to set a custom domain name as a handle on Bluesky</title>
+      <link>http://localhost:1313/posts/how-to-set-a-custom-domain-name-as-a-handle-on-bluesky/</link>
+      <pubDate>Thu, 05 Dec 2024 17:25:08 +0000</pubDate><author>reply@protobear.dev (Marnick De Grave)</author>
+      <guid>http://localhost:1313/posts/how-to-set-a-custom-domain-name-as-a-handle-on-bluesky/</guid>
+      <description>&lt;p&gt;Some people think that setting a custom domain as your Bluesky handle requires self-hosting or managing complex systems, but that’s not the case. Unlike platforms like Mastodon, which can involve hosting an entire server, Bluesky’s identity verification system is much simpler. You don’t need to run a server or host anything, just prove that you own the domain.&lt;/p&gt;&#xA;&lt;p&gt;It’s a straightforward and secure process.&lt;/p&gt;&#xA;&lt;p&gt;Your domain isn’t tied to a single username, either. You can even use subdomains or create handles that overlap with existing domains. For example, my Bluesky handle is @protobear.dev, which matches my domain, protobear.dev. But I’m not limited to that. I could create a separate account just for my blog and set the handle to @blog.protobear.dev if I wanted. Just note that domain-based handles don’t work like email addresses, you can’t use &lt;a href=&#34;mailto:blog@protobear.dev&#34;&gt;blog@protobear.dev&lt;/a&gt; as a handle.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>Some people think that setting a custom domain as your Bluesky handle requires self-hosting or managing complex systems, but that’s not the case. Unlike platforms like Mastodon, which can involve hosting an entire server, Bluesky’s identity verification system is much simpler. You don’t need to run a server or host anything, just prove that you own the domain.</p>
+<p>It’s a straightforward and secure process.</p>
+<p>Your domain isn’t tied to a single username, either. You can even use subdomains or create handles that overlap with existing domains. For example, my Bluesky handle is @protobear.dev, which matches my domain, protobear.dev. But I’m not limited to that. I could create a separate account just for my blog and set the handle to @blog.protobear.dev if I wanted. Just note that domain-based handles don’t work like email addresses, you can’t use <a href="mailto:blog@protobear.dev">blog@protobear.dev</a> as a handle.</p>
+<p>Here’s how simple it is to set this up:</p>
+<ol>
+<li>Generate a key from Bluesky.</li>
+<li>Add a DNS record.</li>
+<li>Click refresh.</li>
+</ol>
+<p>That’s it! You’re done! It’s genuinely that simple.</p>
+<p>To make this less intimidating, I’ll walk you through the process step by step using a domain I already own for a project I’m working on. Even if it seems daunting at first, you’ll see there’s really not much to it.</p>
+<p>Important: While it&rsquo;s not technically difficult to change your handle it involves many different technologies you might not be familiar with, and understandably have questions about as its not entirely unlikely your livelihood is coupled to the domain you&rsquo;d wish to use. That&rsquo;s why at the bottom there&rsquo;s some extra explanations about these technologies, or questions you might have.</p>
+<p>Instructions</p>
+<p>Before we begin, you’ll need to have a Bluesky account already set up. If you don’t have one yet, create an account and log in. Once you&rsquo;re ready, head over to the Settings page to get started.</p>
+<p>Generating the DNS Record</p>
+<p>On the Settings page, navigate to the Account section.</p>
+<p>On the Account page, click on Handle to start the process of setting your custom domain as your handle.</p>
+<p>Click on I have my own domain.</p>
+<p>Once you&rsquo;ve clicked I have my own domain, enter your desired domain name into the field at the top. This will generate the DNS information you need to add to your domain&rsquo;s settings. Make note of the Host, Type, and Value fields, as you&rsquo;ll need these to update your DNS records.</p>
+<p>Adding the DNS Record to your Registrar</p>
+<p>Go to your domain registrar&rsquo;s website (if you don’t already have a domain, I recommend Cloudflare) and navigate to the section where you can manage DNS Records.</p>
+<p>A DNS record is essentially a file associated with your domain name that tells the DNS system where to direct traffic. Don’t worry, we’re not touching the essential records like A, AAAA, or CNAME records that control your website’s functionality.</p>
+<p>Instead, we’re adding a TXT record, which is a simple text-based record often used to verify ownership of a domain. Adding this record poses no security risk to your domain, and Bluesky can’t take control of it.</p>
+<p>Once you’re in the DNS Records section, look for an option to Add a Record—this is where we’ll add the TXT record for Bluesky.</p>
+<p>Other Registrars</p>
+<p>To make this process even easier, I’ve included links to the documentation for adding DNS records for several popular domain registrars. These guides will walk you through the exact steps for your registrar:</p>
+<ul>
+<li>GoDaddy</li>
+<li>Namecheap</li>
+<li>Porkbun</li>
+<li>Hostinger</li>
+<li>Cloudflare</li>
+<li>Wordpress</li>
+</ul>
+<p>Adding the DNS Record</p>
+<p>When you click on Add record you&rsquo;ll get something like this.</p>
+<p>The first thing you should do is change the type to TXT.</p>
+<p>If you&rsquo;re using Cloudflare, don’t worry if the interface looks a bit different initially. When you change the type to TXT, the UI will update to match the format for TXT records. After making this change, it should look something like this:</p>
+<p>From here, you can input the required details provided by Bluesky. These include:</p>
+<ul>
+<li>Name: This will typically be _atproto (or whatever Bluesky specifies).</li>
+<li>Content: Copy and paste the unique value generated by Bluesky for verification.</li>
+<li>TTL: Leave it as the default. (Auto)</li>
+</ul>
+<p>You can find these details on the change handle modal on the Bluesky settings page.</p>
+<p>The Name field should match what Bluesky refers to as the Host, and the Content field should be filled in with the Value provided by Bluesky.</p>
+<p>Once you’ve entered these details, save the record. This step links your Bluesky handle to your domain and verifies your ownership.</p>
+<p>You should now see your new TXT record listed alongside your other DNS records, similar to the image above.</p>
+<p>Depending on your domain registrar, it may take some time for the changes to propagate. With Cloudflare, this process usually takes about a minute.</p>
+<p>Once you&rsquo;ve waited for about a minute, go back to Bluesky and click Verify DNS Record to complete the process.</p>
+<p>If the record has been added correctly, you’ll see a green checkmark, and the button will change to say &ldquo;Update to {domain name}&rdquo;.</p>
+<p>Click this button, and your Bluesky handle will be updated to the domain name you set up. Congratulations! You’re now using your custom domain as your Bluesky handle!</p>
+<p>If Bluesky doesn’t find the DNS record right away, don’t panic! Sometimes it takes a little while for changes to propagate. Depending on factors outside of your control (Like the DNS network) and the registrar you chose (which is within your control), propagation can take up to 72 hours in rare cases.</p>
+<p>To speed things up, make sure the TTL (Time-To-Live) value for your record is set to Auto or a low value like 15 minutes. This will ensure the changes update more quickly. Once the domain is successfully verified, you can change the TTL back to a longer value to reduce unnecessary DNS traffic.</p>
+<p>Patience is key, just wait a bit and try verifying again!</p>
+<p>Optional: Adding subdomains as handles</p>
+<p>You can also use this setup for team members by creating subdomains for each individual. For example, if your main domain is example.com, you could assign subdomains like alice.example.com or bob.example.com to specific team members.</p>
+<p>Simply follow the same steps:</p>
+<ol>
+<li>Add a TXT record for each subdomain in your DNS settings.</li>
+<li>Use the Host field to specify the subdomain (e.g., _atproto.alice for alice.example.com).</li>
+<li>Fill in the Value provided by Bluesky for each account.</li>
+</ol>
+<p>This allows each team member to have a unique handle tied to your organization’s domain, making it both professional and secure!</p>
+<p>QYDA: Questions You Didn&rsquo;t Ask</p>
+<p>What’s a registrar?</p>
+<p>A registrar is the service you use to register and manage a domain name. Think of it as the storefront where you purchase the rights to use a specific domain (e.g., example.com). Registrars also provide tools to manage your domain, like setting up DNS records or renewing your ownership. Popular registrars include Cloudflare, GoDaddy, and Namecheap.</p>
+<p>What’s DNS?</p>
+<p>The Domain Name System (DNS) is like the internet’s address book. When you type a domain name (e.g., example.com) into your browser, DNS translates it into the numerical IP address of the server hosting that website. Without DNS, you’d need to memorize long strings of numbers to visit websites instead of using easy-to-remember names.</p>
+<p>DNS also helps direct other internet traffic, like email or authentication services, by linking domain names to specific servers or systems.</p>
+<p>What’s a DNS record?</p>
+<p>A DNS record is a set of instructions in the DNS that tells internet systems what to do with your domain name. It’s essentially a piece of data that answers questions like:</p>
+<ul>
+<li>“Where is this website hosted?” (via an A or AAAA record pointing to an IP address)</li>
+<li>“Which server should handle mail for this domain?” (via an MX record).</li>
+</ul>
+<p>DNS records also serve other purposes, such as verification. For example:</p>
+<ul>
+<li>SPF or DKIM records: Confirm email authenticity.</li>
+<li>TXT records: Provide additional information about your domain.</li>
+</ul>
+<p>In the case of Bluesky, a TXT record is used to verify that your Bluesky account belongs to the owner of a specific domain. This allows you to connect your domain name as your handle securely.</p>
+<p>What’s a PDS?</p>
+<p>A Personal Data Server (PDS) is a system that stores and manages your online identity and content on decentralized networks like Bluesky’s AT Protocol. Instead of relying entirely on centralized platforms like traditional social networks, a PDS gives you control over your data, allowing you to move between platforms or even self-host if you want.</p>
+<p>Think of a PDS as your personal hub on the web. It ensures that you own your content and identity, and not the platform you’re using.</p>
+<p>Does this mean I’m self-hosting now?</p>
+<p>No, setting up a custom domain for your Bluesky handle doesn’t mean you’re self-hosting. You’re not hosting a server or managing any of the technical backend systems. All you’re doing is proving ownership of a domain by adding a DNS record, which Bluesky uses to verify and associate your domain name with your handle.</p>
+<p>In simpler terms, you’re just adding a tag to your domain to show that “you own this,” and Bluesky does the rest. It’s a lightweight process that doesn’t require any ongoing maintenance.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Why I Gave Away $232,772.2 in Free Advertising on r/MMORPG</title>
+      <link>http://localhost:1313/posts/why-i-gave-away-232-772-2-in-free-advertising-on-r-mmorpg/</link>
+      <pubDate>Mon, 28 Oct 2024 14:00:39 +0000</pubDate><author>reply@protobear.dev (Marnick De Grave)</author>
+      <guid>http://localhost:1313/posts/why-i-gave-away-232-772-2-in-free-advertising-on-r-mmorpg/</guid>
+      <description>&lt;p&gt;The Story Behind r/MMORPG&lt;/p&gt;&#xA;&lt;p&gt;r/MMORPG is a subreddit with its share of challenges, rough edges, and the occasional bad apple in both the community and the moderation team. However, what truly defines it is its dedicated community. These are people who love a very specific niche of gaming, coming to Reddit to discuss, discover, and share their passion, even to hate on games they dislike, which is a different kind of love, I suppose. This combination, though, makes the subreddit a bit of a minefield for developers. Even a whiff of positivity is sometimes dismissed as astroturfing, and many devs struggle to figure out how to engage without crossing invisible lines.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>The Story Behind r/MMORPG</p>
+<p>r/MMORPG is a subreddit with its share of challenges, rough edges, and the occasional bad apple in both the community and the moderation team. However, what truly defines it is its dedicated community. These are people who love a very specific niche of gaming, coming to Reddit to discuss, discover, and share their passion, even to hate on games they dislike, which is a different kind of love, I suppose. This combination, though, makes the subreddit a bit of a minefield for developers. Even a whiff of positivity is sometimes dismissed as astroturfing, and many devs struggle to figure out how to engage without crossing invisible lines.</p>
+<p>Yet, it&rsquo;s hard to ignore the platform when r/MMORPG has over 50 million views annually and an average of 635k unique visitors per month, and it&rsquo;s still growing. For indie developers, this audience is too important to pass up as it is their core audience.</p>
+<p>I joined the moderator team more than eight years ago, and six years ago, I became the subreddit’s owner. Well, &ldquo;administrator&rdquo; is a better term, after all, this is Reddit, not my private domain, and any value we create here ultimately belongs to the platform of which we see no return. Meanwhile Reddit is making deals selling user content to AI companies. But I’ve tried to make a positive impact where I can to improve the community for the people who enjoy it.</p>
+<p>The Developer Spotlight program is one such initiative I introduced to bridge the gap between game developers and the r/MMORPG community. It allows developers to showcase their projects, gather valuable feedback, and engage with our passionate audience.</p>
+<p>How the Spotlight Came to Be</p>
+<p>Not many know this, but I used to work at an indie dev studio. Thankfully, I was an employee rather than one of the founders, but I still saw firsthand the struggles of promoting a game on a shoestring budget. It became clear that devs needed more opportunities to connect with audiences without paying an arm and a leg, and ideally, these opportunities would benefit everyone involved. To put things into perspective: GamesRadar charges about $5,000 for ads, estimating roughly 3,000 wishlists from the campaign. Meanwhile, OTK Media, the company representing streamers like Asmongold and Sodapoppin, charges $75,000 to showcase your game during their winter expo, and a 60-second ad during that same event costs $10,000. People deserve to be paid for their services, but for small developers, $75,000 could represent a year’s worth of income, something most simply can&rsquo;t justify spending.</p>
+<p>That’s what the r/MMORPG Developer Spotlight was designed to do: offer a week of prime exposure where devs could introduce their projects to our community, share insights, and foster conversations, all without spending a cent. In return, we’d get great content for the subreddit, and our community would learn about upcoming games. It’s hard to beat free advertising, especially when it comes with a click-through rate of around 30%. Many of these spotlights have sparked articles, conversations, and lasting interest. By my own calculations we provide approximately $4,952.60 worth of free advertisement per spotlight. If you want to check my math, or check out what I estimate the value would be depending on a different CPM you can do so here.</p>
+<p>We’ve had some standout examples over the years. Corepunk’s spotlight drew significant attention, as did Profane. One smaller project even managed to attract a bigger development team thanks to the exposure. It&rsquo;s moments like these that remind me why offering the platform for free has been a privilege, even if the community isn&rsquo;t always 100% supportive.</p>
+<p>Challenges and Limitations</p>
+<p>Of course, the spotlight isn’t without its flaws. The biggest limitation? Me. Organizing these spotlights takes time and energy, and I haven’t been able to delegate the workload effectively, as not many people are interested in working for free. Burnout is real, and sometimes I just can&rsquo;t find the time.</p>
+<p>There’s also the challenge of making judgment calls, deciding which projects to feature and which to decline. Is a solo dev’s game a passion project or a thinly-veiled scam? I’ve denied games because I didn’t trust the developer, and I’ve tried to systematize the decision-making process, even going so far as to create a points system at one time. But in the end, it’s all subjective.</p>
+<p>Then there’s Reddit itself. We don’t own the platform; we’re subject to its rules and limitations. I can’t set up a newsletter, add new functionality, tweak the CSS, or even send notifications, all things that could help us improve the spotlight program. Our reach and growth are ultimately limited by Reddit’s decisions.</p>
+<p>To make things more complicated, Reddit’s mobile interface is taking over, which makes it even harder to highlight the content we want to feature. It’s something we’re still trying to work around.</p>
+<p>The Future of the Spotlight, r/MMORPG, and My Place in It</p>
+<p>I want to kick off another big round of developer spotlights, ideally with new developers, and collaborate more closely to create engaging content. As for the subreddit itself, it&rsquo;s doing well: we’ve grown significantly over the past year, with views increasing to 50.5 million and a steady rise in unique visitors and subscribers.</p>
+<p>But as we move forward, I’ve been questioning my own place here. By 2026, I’ll have been involved with r/MMORPG for ten years, and I’m starting to think it might be time for me to step aside. There are others who could do an amazing job. And I’ll admit, I’m scared of letting go, scared of losing the industry contacts, scared of being just another player again. It’s something I’ve been mulling over for the past two years, and by the ten-year mark, I’ll have made my decision.</p>
+<p>Closing Thoughts</p>
+<p>What a roundabout way to announce I might be stepping down, all while just wanting to highlight the spotlight program and give a bit of context! But I’m genuinely proud of what we’ve built here. I’ve met incredible people along the way, and I hope I’ve made a difference, even if the community doesn’t always appreciate my efforts. I’m not looking for validation anymore; I just want to keep making things better, for however long I&rsquo;m still here.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>You&#39;ve got a friend (that wants to take your money) in me.</title>
+      <link>http://localhost:1313/posts/youve-got-a-friend-that-wants-to-take-your-money-in-me/</link>
+      <pubDate>Tue, 22 Oct 2024 07:12:39 +0000</pubDate><author>reply@protobear.dev (Marnick De Grave)</author>
+      <guid>http://localhost:1313/posts/youve-got-a-friend-that-wants-to-take-your-money-in-me/</guid>
+      <description>&lt;p&gt;Dear tech bro’s,&lt;/p&gt;&#xA;&lt;p&gt;Can we just stop with this late-stage capitalist nonsense of creating inferior products to replace things we already have? It’s like a strategy to erode our reliance on actual skills and tools, all to charge us a monthly fee for something we can already do with minimal effort.&lt;/p&gt;&#xA;&lt;p&gt;This week, a tech company has launched a product aimed at replacing the idea of friends as a support system. It introduces a constant, chatty presence in your life, making sure you never have a moment of peace. Because god forbid you form an actual thought.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>Dear tech bro’s,</p>
+<p>Can we just stop with this late-stage capitalist nonsense of creating inferior products to replace things we already have? It’s like a strategy to erode our reliance on actual skills and tools, all to charge us a monthly fee for something we can already do with minimal effort.</p>
+<p>This week, a tech company has launched a product aimed at replacing the idea of friends as a support system. It introduces a constant, chatty presence in your life, making sure you never have a moment of peace. Because god forbid you form an actual thought.</p>
+<p>Before we dive deeper, let’s watch the product video together:</p>
+<p>What the actual fuck did we just witness?</p>
+<p>This device features an always-on microphone(I assume, the video shows it both ways) that texts you comments on your actions, responds to nonsensical remarks, makes judgments, and interrupts your activities—basically, it pretends to be an important figure in your life while actually being invasive and annoying.</p>
+<p>We often throw around Orwell’s name whenever something feels dystopian, but in this case, it seems apt. Orwell would probably be alarmed by such a device—a “friend” that monitors your every move, potentially manipulates your perceptions of reality as it is happening, and records your interactions. It’s like a creepy version of Big Brother masquerading as a&hellip; well&hellip; friend.</p>
+<p>The concept video is clearly overblown marketing for what is essentially just a wrapper around chatgpt. The claim that it’s been in development for years is laughable - The product is so underbaked and obviously in the concept stage. How can the AI make a comment on a show you’re watching if you had to press a button to talk to it afterwards? Is it recording your screen? Audio analysis? How does the AI have opinions on a show? Is this curated by other people? Does the AI know your preferences and says things to align with how you think? That comment the guy got about losing the game. Yeah trash talk is funny, but imagine getting that message when your confidence is low.</p>
+<p>It’s, well, a friend — an AI friend that can go with you anywhere, experience things with you, and just be there with you all the time. “It’s very supportive, very validating, it’ll encourage your ideas,” Schiffmann Interview with “The Verge”</p>
+<p>A friend? No. It’s not. People get lonely. I’ve been there myself. But having an AI around your neck that says “You go girl, eat that cheeseburger!” isn’t solving loneliness. It’s making it worse by teaching people to expect from humans what they get from an AI in terms of communication and what support looks like, thereby unlearning real coping mechanisms.</p>
+<p>I suspect all the processing happens in a mobile app, and the necklace is just a Bluetooth microphone. At least if that’s true, you might be able to repurpose the device when the company inevitably goes under.</p>
+<p>Meanwhile, billions will be sunk into gadgets like this, which will eventually end up in landfills. All this while we bemoan the planet’s burning state, with AI set to use more energy by 2026 than Japan, a country of 125 million people. All thanks to unchecked corporate greed.</p>
+<p>In 1979 IBM said in a presentation</p>
+<p>“A computer can never be held accountable, therefore a computer must never make a management decision” -</p>
+<p>So to end this rant I’d like to steal that quote and make it my own.</p>
+<p>“A computer isn’t a fucking person, and therefore can’t be your fucking friend.”</p>
+<p>Disclaimer: This article was originally published on my GitHub Pages blog. Minor edits may have been made for clarity and formatting.</p>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>
