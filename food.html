@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Diary</title>
+  <style>
+    :root {
+      --background-color: #1c1c1e;
+      --card-background: #2c2c2e;
+      --text-color: #f2f2f7;
+      --secondary-text: #8e8e93;
+      --accent-color: #0a84ff;
+      --border-radius: 12px;
+      --breakfast-color: rgba(64, 156, 255, 0.15);
+      --lunch-color: rgba(48, 209, 88, 0.15);
+      --dinner-color: rgba(255, 69, 58, 0.15);
+      --snack-color: rgba(191, 90, 242, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.5;
+    }
+
+    h1 {
+      color: var(--text-color);
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 600;
+      font-size: 24px;
+    }
+
+    .entry-form {
+      background-color: var(--card-background);
+      padding: 20px;
+      border-radius: var(--border-radius);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+      color: var(--text-color);
+      font-size: 14px;
+    }
+
+    textarea, input[type="datetime-local"], select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #3c3c3e;
+      border-radius: var(--border-radius);
+      background-color: #3c3c3e;
+      color: var(--text-color);
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16px;
+    }
+
+    textarea {
+      height: 80px;
+      resize: vertical;
+    }
+
+    select {
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-size: 12px;
+      padding-right: 30px;
+    }
+
+    .photo-preview {
+      margin-top: 10px;
+      max-width: 100%;
+      height: 100px;
+      background-color: #3c3c3e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      color: var(--secondary-text);
+    }
+
+    .photo-preview img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    button {
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .entries {
+      background-color: var(--card-background);
+      padding: 16px;
+      border-radius: var(--border-radius);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+
+    .entry {
+      padding: 14px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .breakfast {
+      background-color: var(--breakfast-color);
+    }
+
+    .lunch {
+      background-color: var(--lunch-color);
+    }
+
+    .dinner {
+      background-color: var(--dinner-color);
+    }
+
+    .snack {
+      background-color: var(--snack-color);
+    }
+
+    .entry-time {
+      font-weight: 500;
+      margin-bottom: 6px;
+      color: var(--text-color);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    .meal-type {
+      padding: 2px 8px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-color);
+    }
+
+    .entry-content {
+      flex: 1;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .entry-photo {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .photo-container {
+      position: relative;
+      width: 80px;
+      height: 80px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 8px;
+      margin-top: 5px;
+      width: 100%;
+    }
+
+    .edit-btn {
+      background-color: #30d158;
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+
+    .delete-btn {
+      background-color: #ff453a;
+    }
+
+    .cancel-btn {
+      background-color: #8e8e93;
+    }
+
+    .empty-message {
+      text-align: center;
+      color: var(--secondary-text);
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    /* Modal for enlarged image */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      overflow: auto;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+      margin: auto;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 35px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .editing {
+      border: 2px solid var(--accent-color);
+    }
+
+    /* File upload styling */
+    .file-upload {
+      display: inline-block;
+      width: auto;
+    }
+
+    .file-upload-btn {
+      background-color: #3c3c3e;
+      color: var(--text-color);
+      padding: 8px 16px;
+      border-radius: var(--border-radius);
+      text-align: center;
+      cursor: pointer;
+      display: block;
+      font-size: 13px;
+      border: 1px solid #4c4c4e;
+    }
+
+    .file-upload input[type=file] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .action-buttons {
+      display: flex;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    #add-entry {
+      flex: 1;
+    }
+
+    .edit-mode-buttons {
+      display: flex;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .edit-mode-buttons button {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+<h1>Fast Food</h1>
+
+<div class="entry-form" id="entry-form">
+  <div class="form-group">
+    <label for="food-description">What did you eat?</label>
+    <textarea id="food-description" placeholder="Describe what you ate..."></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="meal-type">Meal Type</label>
+    <select id="meal-type">
+      <option value="breakfast">Breakfast</option>
+      <option value="lunch">Lunch</option>
+      <option value="dinner">Dinner</option>
+      <option value="snack">Snack</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="food-time">When did you eat it?</label>
+    <input type="datetime-local" id="food-time">
+  </div>
+
+  <div class="form-group">
+    <label for="food-photo">Photo (optional)</label>
+    <div class="file-upload" style="position: relative;">
+      <div class="file-upload-btn">Choose Photo</div>
+      <input type="file" id="food-photo" accept="image/*" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;">
+    </div>
+    <div class="photo-preview" id="photo-preview">
+      <span>No photo selected</span>
+    </div>
+  </div>
+
+  <div class="action-buttons">
+    <button id="add-entry">Add to Diary</button>
+  </div>
+
+  <div class="edit-mode-buttons" id="edit-mode-buttons" style="display: none;">
+    <button id="cancel-edit" class="cancel-btn">Cancel</button>
+    <button id="delete-entry" class="delete-btn">Delete</button>
+  </div>
+</div>
+
+<div class="entries" id="entries">
+  <div class="empty-message" id="empty-message">No entries yet. Start adding your meals!</div>
+  <div id="entries-container"></div>
+</div>
+
+<div class="actions">
+  <button id="export-data">Export Diary</button>
+  <button id="clear-data" class="delete-btn">Clear All</button>
+</div>
+
+<!-- Modal for enlarged images -->
+<div id="image-modal" class="modal">
+  <span class="modal-close" id="modal-close">&times;</span>
+  <img class="modal-content" id="enlarged-image">
+</div>
+
+<script>
+  // Initialize variables
+  let foodEntries = [];
+  let editingIndex = -1;
+  const foodDescription = document.getElementById('food-description');
+  const mealType = document.getElementById('meal-type');
+  const foodTime = document.getElementById('food-time');
+  const foodPhoto = document.getElementById('food-photo');
+  const photoPreview = document.getElementById('photo-preview');
+  const addEntryBtn = document.getElementById('add-entry');
+  const entriesContainer = document.getElementById('entries-container');
+  const emptyMessage = document.getElementById('empty-message');
+  const exportBtn = document.getElementById('export-data');
+  const clearBtn = document.getElementById('clear-data');
+  const imageModal = document.getElementById('image-modal');
+  const enlargedImage = document.getElementById('enlarged-image');
+  const modalClose = document.getElementById('modal-close');
+  const entryForm = document.getElementById('entry-form');
+  const editModeButtons = document.getElementById('edit-mode-buttons');
+  const cancelEditBtn = document.getElementById('cancel-edit');
+  const deleteEntryBtn = document.getElementById('delete-entry');
+
+  // Set default datetime to now
+  const now = new Date();
+  now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+  foodTime.value = now.toISOString().slice(0, 16);
+
+  // Load entries from localStorage
+  function loadEntries() {
+    const savedEntries = localStorage.getItem('foodEntries');
+    if (savedEntries) {
+      try {
+        foodEntries = JSON.parse(savedEntries);
+        renderEntries();
+      } catch (e) {
+        console.error("Error loading entries:", e);
+        foodEntries = [];
+        localStorage.removeItem('foodEntries');
+      }
+    }
+  }
+
+  // Save entries to localStorage
+  function saveEntries() {
+    localStorage.setItem('foodEntries', JSON.stringify(foodEntries));
+  }
+
+  // Render entries in the UI
+  function renderEntries() {
+    entriesContainer.innerHTML = '';
+
+    if (!foodEntries || foodEntries.length === 0) {
+      emptyMessage.style.display = 'block';
+      return;
+    }
+
+    emptyMessage.style.display = 'none';
+
+    // Sort entries by time
+    foodEntries.sort((a, b) => new Date(a.time) - new Date(b.time));
+
+    foodEntries.forEach((entry, index) => {
+      const entryElement = document.createElement('div');
+      entryElement.className = `entry ${entry.mealType || 'breakfast'}`;
+      entryElement.dataset.index = index;
+
+      const timeElement = document.createElement('div');
+      timeElement.className = 'entry-time';
+      const entryDate = new Date(entry.time);
+
+      const timeText = document.createElement('span');
+      timeText.textContent = entryDate.toLocaleString();
+
+      const mealTypeSpan = document.createElement('span');
+      mealTypeSpan.className = 'meal-type';
+      const mealTypeName = entry.mealType ? entry.mealType.charAt(0).toUpperCase() + entry.mealType.slice(1) : 'Meal';
+      mealTypeSpan.textContent = mealTypeName;
+
+      timeElement.appendChild(timeText);
+      timeElement.appendChild(mealTypeSpan);
+
+      const contentElement = document.createElement('div');
+      contentElement.className = 'entry-content';
+      contentElement.textContent = entry.description;
+
+      entryElement.appendChild(timeElement);
+      entryElement.appendChild(contentElement);
+
+      if (entry.photo) {
+        const photoContainer = document.createElement('div');
+        photoContainer.className = 'photo-container';
+
+        const photoElement = document.createElement('img');
+        photoElement.className = 'entry-photo';
+        photoElement.src = entry.photo;
+        photoElement.alt = 'Food photo';
+        photoElement.addEventListener('click', function() {
+          enlargedImage.src = entry.photo;
+          imageModal.style.display = 'flex';
+        });
+
+        photoContainer.appendChild(photoElement);
+        entryElement.appendChild(photoContainer);
+      }
+
+      const btnGroup = document.createElement('div');
+      btnGroup.className = 'btn-group';
+
+      const editButton = document.createElement('button');
+      editButton.className = 'edit-btn';
+      editButton.textContent = 'Edit';
+      editButton.addEventListener('click', () => {
+        startEditing(index);
+      });
+
+      btnGroup.appendChild(editButton);
+      entryElement.appendChild(btnGroup);
+      entriesContainer.appendChild(entryElement);
+    });
+  }
+
+  // Start editing an entry
+  function startEditing(index) {
+    editingIndex = index;
+    const entry = foodEntries[index];
+
+    // Fill the form with the entry data
+    foodDescription.value = entry.description || '';
+    mealType.value = entry.mealType || 'breakfast';
+    foodTime.value = entry.time || now.toISOString().slice(0, 16);
+
+    // Update photo preview if there's a photo
+    if (entry.photo) {
+      photoPreview.innerHTML = '';
+      const img = document.createElement('img');
+      img.src = entry.photo;
+      photoPreview.appendChild(img);
+    } else {
+      photoPreview.innerHTML = '<span>No photo selected</span>';
+    }
+
+    // Change button text
+    addEntryBtn.textContent = 'Update Entry';
+
+    // Show edit mode buttons
+    editModeButtons.style.display = 'flex';
+
+    // Scroll to form
+    entryForm.scrollIntoView({ behavior: 'smooth' });
+
+    // Highlight the entry being edited
+    document.querySelectorAll('.entry').forEach(entry => {
+      entry.classList.remove('editing');
+    });
+
+    const entryElement = document.querySelector(`.entry[data-index="${index}"]`);
+    if (entryElement) {
+      entryElement.classList.add('editing');
+    }
+  }
+
+  // Cancel editing
+  function cancelEditing() {
+    editingIndex = -1;
+
+    // Reset form
+    foodDescription.value = '';
+    mealType.value = 'breakfast';
+    const now = new Date();
+    now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+    foodTime.value = now.toISOString().slice(0, 16);
+    foodPhoto.value = '';
+    photoPreview.innerHTML = '<span>No photo selected</span>';
+
+    // Reset button text
+    addEntryBtn.textContent = 'Add to Diary';
+
+    // Hide edit mode buttons
+    editModeButtons.style.display = 'none';
+
+    // Remove highlight
+    document.querySelectorAll('.entry').forEach(entry => {
+      entry.classList.remove('editing');
+    });
+  }
+
+  // Delete an entry
+  function deleteEntry(index) {
+    if (confirm('Are you sure you want to delete this entry?')) {
+      foodEntries.splice(index, 1);
+      saveEntries();
+      renderEntries();
+      cancelEditing();
+    }
+  }
+
+  // Handle photo selection
+  foodPhoto.addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        photoPreview.innerHTML = '';
+        const img = document.createElement('img');
+        img.src = event.target.result;
+        photoPreview.appendChild(img);
+      };
+      reader.readAsDataURL(file);
+    } else {
+      photoPreview.innerHTML = '<span>No photo selected</span>';
+    }
+  });
+
+  // Add or update an entry
+  addEntryBtn.addEventListener('click', function() {
+    if (!foodDescription.value.trim() || !foodTime.value) {
+      alert('Please enter what you ate and when you ate it.');
+      return;
+    }
+
+    const entryData = {
+      description: foodDescription.value.trim(),
+      mealType: mealType.value,
+      time: foodTime.value,
+      photo: null
+    };
+
+    // Check if we're editing or creating a new entry
+    if (editingIndex >= 0) {
+      // If photo wasn't changed, keep the old one
+      if (foodPhoto.files.length === 0) {
+        entryData.photo = foodEntries[editingIndex].photo;
+        updateEntry(entryData);
+      } else {
+        // If photo was changed, read the new one
+        const reader = new FileReader();
+        reader.onload = function(event) {
+          entryData.photo = event.target.result;
+          updateEntry(entryData);
+        };
+        reader.readAsDataURL(foodPhoto.files[0]);
+      }
+    } else {
+      // Creating a new entry
+      if (foodPhoto.files.length === 0) {
+        // No photo selected
+        addEntryToList(entryData);
+      } else {
+        // Photo selected, read it
+        const reader = new FileReader();
+        reader.onload = function(event) {
+          entryData.photo = event.target.result;
+          addEntryToList(entryData);
+        };
+        reader.readAsDataURL(foodPhoto.files[0]);
+      }
+    }
+  });
+
+  function updateEntry(entryData) {
+    foodEntries[editingIndex] = entryData;
+    saveEntries();
+    renderEntries();
+    cancelEditing();
+  }
+
+  function addEntryToList(entry) {
+    // Make sure foodEntries is an array
+    if (!Array.isArray(foodEntries)) {
+      foodEntries = [];
+    }
+
+    foodEntries.push(entry);
+    saveEntries();
+    renderEntries();
+
+    // Reset form
+    foodDescription.value = '';
+    const now = new Date();
+    now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+    foodTime.value = now.toISOString().slice(0, 16);
+    foodPhoto.value = '';
+    photoPreview.innerHTML = '<span>No photo selected</span>';
+  }
+
+  // Export data
+  exportBtn.addEventListener('click', function() {
+    if (!foodEntries || foodEntries.length === 0) {
+      alert('No entries to export.');
+      return;
+    }
+
+    // Create data object for JSON export
+    const exportData = {
+      exportDate: new Date().toISOString(),
+      entries: foodEntries
+    };
+
+    // Create and download the file
+    const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `food-diary-export-${new Date().toISOString().slice(0, 10)}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  });
+
+  // Clear all data
+  clearBtn.addEventListener('click', function() {
+    if (confirm('Are you sure you want to delete all entries? This cannot be undone.')) {
+      foodEntries = [];
+      saveEntries();
+      renderEntries();
+      cancelEditing();
+    }
+  });
+
+  // Close modal when clicking the X
+  modalClose.addEventListener('click', function() {
+    imageModal.style.display = 'none';
+  });
+
+  // Close modal when clicking outside the image
+  imageModal.addEventListener('click', function(event) {
+    if (event.target === imageModal) {
+      imageModal.style.display = 'none';
+    }
+  });
+
+  // Hook up cancel and delete buttons
+  cancelEditBtn.addEventListener('click', cancelEditing);
+  deleteEntryBtn.addEventListener('click', function() {
+    if (editingIndex >= 0) {
+      deleteEntry(editingIndex);
+    }
+  });
+
+  // Load entries when the page loads
+  document.addEventListener('DOMContentLoaded', function() {
+    loadEntries();
+  });
+
+  // Also load immediately in case DOMContentLoaded already fired
+  loadEntries();
+</script>
+</body>
+</html>
