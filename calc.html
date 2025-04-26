@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spell Cost Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        input, select, button {
+            margin: 10px 0;
+            padding: 5px;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Spell Cost Calculator</h2>
+
+<label>Spell Level: <input type="number" id="spellLevel" min="0"></label><br>
+
+<label>Permanence:
+    <select id="permanence">
+        <option value="1">No</option>
+        <option value="10">Yes</option>
+    </select>
+</label><br>
+
+<label>Maintain Concentration:
+    <select id="maintainConc">
+        <option value="1">No</option>
+        <option value="3">Yes</option>
+    </select>
+</label><br>
+
+<label>Uses Beyond 1/Day:
+    <input type="number" id="uses" min="1" value="1">
+</label><br>
+
+<button onclick="calculate()">Calculate</button>
+
+<div class="result" id="result"></div>
+
+<script>
+    function calculate() {
+        const spellLevel = parseFloat(document.getElementById('spellLevel').value) || 0;
+        const permanence = parseFloat(document.getElementById('permanence').value);
+        const maintainConc = parseFloat(document.getElementById('maintainConc').value);
+        const uses = parseFloat(document.getElementById('uses').value) || 1;
+
+        if (uses <= 0) {
+            document.getElementById('result').innerText = "Uses must be at least 1.";
+            return;
+        }
+
+        const cost = 300 * spellLevel * 10 * permanence * 3 * maintainConc * 10 * (1 / uses);
+
+        document.getElementById('result').innerText = `Total Cost: ${cost.toFixed(2)}`;
+    }
+</script>
+
+</body>
+</html>
