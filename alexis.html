@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exponenten – Oefeningen</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .exercise {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+    .hint {
+      font-style: italic;
+      color: gray;
+      margin-top: 5px;
+    }
+    .result {
+      margin-top: 10px;
+    }
+    input[type="number"] {
+      padding: 5px;
+      margin-top: 5px;
+    }
+    button {
+      margin-top: 10px;
+      margin-right: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exponenten – Oefeningen</h1>
+  <div id="exercise-container"></div>
+  <button onclick="checkAnswers()">Controleer antwoorden</button>
+
+  <script>
+    const exercises = [
+      { id: 1, question: "(-3)^2", answer: 9, hint: "(-3)^2 betekent (-3) × (-3). Wat is dat?" },
+      { id: 2, question: "-4^2", answer: -16, hint: "-4^2 betekent -(4 × 4). Denk aan de volgorde van bewerkingen." },
+      { id: 3, question: "(-5)^3", answer: -125, hint: "(-5)^3 = (-5) × (-5) × (-5). Wat gebeurt er bij een oneven exponent?" },
+      { id: 4, question: "-(-3)^2", answer: -9, hint: "Eerst (-3)^2 berekenen, dan het minteken ervoor toepassen." },
+      { id: 5, question: "(-2)^4", answer: 16, hint: "(-2)^4 betekent vier keer (-2) met zichzelf vermenigvuldigen." },
+      { id: 6, question: "(-7)^1", answer: -7, hint: "Elke macht met exponent 1 is zichzelf." },
+      { id: 7, question: "-(-6)^2", answer: -36, hint: "Eerst (-6)^2 berekenen, dan het minteken toepassen." },
+      { id: 8, question: "(-1)^5", answer: -1, hint: "Wat gebeurt er met negatieve getallen tot een oneven macht?" },
+      { id: 9, question: "(-4)^3", answer: -64, hint: "(-4)^3 = (-4) × (-4) × (-4)." },
+      { id: 10, question: "-(-2)^3", answer: -8, hint: "Eerst (-2)^3, daarna het minteken toepassen." },
+    ];
+
+    const responses = {};
+    const hintsShown = {};
+
+    const container = document.getElementById("exercise-container");
+
+    exercises.forEach(({ id, question }) => {
+      const div = document.createElement("div");
+      div.className = "exercise";
+      div.id = `exercise-${id}`;
+
+      div.innerHTML = `
+        <div><strong>${id}. ${question} =</strong></div>
+        <input type="number" id="input-${id}" />
+        <div>
+          <button onclick="showHint(${id})">Hint</button>
+        </div>
+        <div class="hint" id="hint-${id}" style="display:none;"></div>
+        <div class="result" id="result-${id}"></div>
+      `;
+
+      container.appendChild(div);
+    });
+
+    function showHint(id) {
+      const hintDiv = document.getElementById(`hint-${id}`);
+      const exercise = exercises.find(e => e.id === id);
+      hintDiv.textContent = `Hint: ${exercise.hint}`;
+      hintDiv.style.display = "block";
+    }
+
+    function checkAnswers() {
+      exercises.forEach(({ id, answer }) => {
+        const input = document.getElementById(`input-${id}`);
+        const resultDiv = document.getElementById(`result-${id}`);
+        const value = parseInt(input.value);
+        if (!isNaN(value)) {
+          resultDiv.textContent = value === answer ? "✅ Juist" : "❌ Fout";
+        } else {
+          resultDiv.textContent = "❌ Geen geldig getal ingevuld";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
